@@ -27,3 +27,7 @@ End to end tests can be found at **cypress --> integration --> home.spec.js**
 ```
 yarn run cypress open
 ```
+
+### Deployment
+
+The project is deployed at https://rick-and-morty-api-demo.herokuapp.com/
