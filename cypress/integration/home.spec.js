@@ -1,4 +1,4 @@
-context("Inventory Page", () => {
+context("Home Page", () => {
     beforeEach(() => {
         cy.visit("http://localhost:8080");
     });
