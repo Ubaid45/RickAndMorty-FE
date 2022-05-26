@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Rick and Morty</h1>
+    <h1 id="title">Rick and Morty</h1>
   
   </div>
 </template>
