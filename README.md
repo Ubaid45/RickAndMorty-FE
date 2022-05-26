@@ -1,4 +1,4 @@
-# my-vue-project
+# Rick And Morty
 
 ## Project setup
  The priject can be setup via **npm** or **yarn**
