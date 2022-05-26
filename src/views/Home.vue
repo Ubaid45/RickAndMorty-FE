@@ -1,0 +1,54 @@
+<template>
+  <div>
+    <vue-instant :suggestOnAllWords="true"
+ :suggestion-attribute="suggestionAttribute" v-model="value" :disabled="false"  @input="changed" :show-autocomplete="true" :autofocus="false" :suggestions="suggestions" name="rickandmorty" placeholder="Search for the character name" type="google"></vue-instant>
+
+    <span class="card-list">
+      <Card
+        v-for="character in suggestions" 
+        :key="character.id"
+        :character-list="character"
+      /> 
+    </span>
+  </div>
+</template>
+
+<script>
+import Card from '@/components/Card.vue';
+import Vue from 'vue'
+import VueInstant from 'vue-instant'
+import 'vue-instant/dist/vue-instant.css'
+import { api } from '../services/API';
+
+
+Vue.use(VueInstant)
+
+export default {
+  name: "Home",
+  components: {
+    Card
+  },
+
+  data () {
+    return {
+        value: '',
+        suggestionAttribute: 'name',
+        suggestions: [],
+        selectedEvent: "",
+    }
+  },
+  methods: {
+    changed: function() {
+      var that = this
+      this.suggestions = []
+      api.getCharacters(this.value)
+          .then(function(response) {
+          response.data.results.forEach(function(a) {
+              that.suggestions.push(a)
+          })
+      })
+    },
+    
+  }
+};
+</script>
