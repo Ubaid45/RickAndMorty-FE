@@ -9,7 +9,7 @@
       <span>State:</span> {{ characterList.status }}
     </p>
     <p class="last__item">
-      <span>Location:</span> {{ characterList.location.name }}
+      <span>Last known location:</span> {{ characterList.location.name }}
     </p>
   </div>
 </template>
