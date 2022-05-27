@@ -16,16 +16,9 @@ npm run serve
 yarn serve
 ```
 
-### Install Cypress
-
-```
-npm install cypress --save-dev
-yarn add cypress @cypress/vue @cypress/webpack-dev-server --dev
-```
+### Run Cypress end to end testing
 
 End to end tests can be found at **cypress --> integration --> home.spec.js**
-
-### Run Cypress end to end testing
 
 ```
 npx cypress open
