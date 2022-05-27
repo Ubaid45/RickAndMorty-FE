@@ -22,6 +22,16 @@ import { api } from '../services/API';
 
 
 Vue.use(VueInstant)
+ function getData(pointer, name){
+       var that = pointer
+      pointer.suggestions = []
+      api.getCharacters(name)
+          .then(function(response) {
+          response.data.results.forEach(function(a) {
+              that.suggestions.push(a)
+          })
+      })
+    }
 
 export default {
   name: "Home",
@@ -37,17 +47,15 @@ export default {
         selectedEvent: "",
     }
   },
+  created: function () {
+      getData(this, '');
+  } ,
   methods: {
     changed: function() {
-      var that = this
-      this.suggestions = []
-      api.getCharacters(this.value)
-          .then(function(response) {
-          response.data.results.forEach(function(a) {
-              that.suggestions.push(a)
-          })
-      })
+      getData(this, this.value);
     },
+
+    
     
   }
 };
