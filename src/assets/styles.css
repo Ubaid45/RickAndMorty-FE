@@ -31,7 +31,6 @@ body {
     grid-gap: 25px;
     justify-content: center;
     margin-top: 50px;
-    ;
 }
 
 .container {
@@ -41,7 +40,7 @@ body {
 }
 
 .container h1 {
-    background: -webkit-linear-gradient(#FFF720, #3CD500);
+    background: -webkit-linear-gradient(#8120ff, #99d500);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 7em;
@@ -53,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
 }

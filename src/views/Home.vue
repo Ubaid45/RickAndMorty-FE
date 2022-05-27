@@ -28,10 +28,12 @@ Vue.use(VueInstant)
       api.getCharacters(name)
           .then(function(response) {
           response.data.results.forEach(function(a) {
-              that.suggestions.push(a)
-          })
+             if(that.suggestions.indexOf(a) === -1) {
+                that.suggestions.push(a)
+             }
       })
-    }
+    })
+ }
 
 export default {
   name: "Home",
@@ -50,10 +52,12 @@ export default {
   created: function () {
       getData(this, '');
   } ,
+ 
   methods: {
     changed: function() {
       getData(this, this.value);
     },
+    
 
     
     
