@@ -27,4 +27,4 @@ yarn run cypress open
 
 ### Deployment
 
-The project is deployed at [https://rick-and-morty-api-demo.herokuapp.com/](https://rickandmorty-api-demo.herokuapp.com/)
+The project is deployed at https://rick-and-morty-test-app-demo.herokuapp.com
